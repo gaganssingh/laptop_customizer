@@ -6,10 +6,6 @@ export default function SummaryList(props) {
 		const featureHash = feature + "-" + idx;
 		const selectedOption = props.selected[feature];
 
-		return (
-			<div>
-				<SummaryOption feature={feature} featureHash={featureHash} selectedOption={selectedOption} />
-			</div>
-		);
+		return <SummaryOption key={idx} feature={feature} featureHash={featureHash} selectedOption={selectedOption} />;
 	});
 }
